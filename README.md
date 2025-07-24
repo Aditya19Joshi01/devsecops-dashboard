@@ -27,7 +27,7 @@ Built with:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/devsecops-dashboard.git
+git clone https://github.com/Aditya19Joshi01/devsecops-dashboard.git
 cd devsecops-dashboard
 ```
 
@@ -110,7 +110,7 @@ devsecops-dashboard/
 
 ## 📜 License
 
-MIT License © 2025 [Aditya Joshi](https://github.com/YOUR_USERNAME)
+MIT License © 2025 [Aditya Joshi](https://github.com/Aditya19Joshi01)
 
 ---
 
