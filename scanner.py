@@ -7,6 +7,7 @@ from datetime import datetime
 
 from pymongo import MongoClient
 from dotenv import load_dotenv
+from summarizer import summarize_text
 
 load_dotenv()
 
@@ -65,10 +66,15 @@ def clone_and_scan(repo_url):
             }
             collection.insert_one(scan_data)
 
+            # Combine vulnerability descriptions for summarization
+            combined_text = "\n".join([v["issue_text"] for v in issues_clean])
+            summary = summarize_text(combined_text)
+
             return {
                 "vulnerabilities": issues_clean,
                 "risk_score": round(risk_score, 2),
-                "summary": output.get("metrics", {})
+                "summary": output.get("metrics", {}),
+                "report_summary": summary
             }
 
         else:

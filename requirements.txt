@@ -2,4 +2,5 @@ streamlit
 requests
 flask
 pymongo
-
+python-dotenv
+pandas
